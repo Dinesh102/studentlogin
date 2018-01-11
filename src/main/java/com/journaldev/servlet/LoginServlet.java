@@ -31,10 +31,10 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String errorMsg = null;
 		if(email == null || email.equals("")){
-			errorMsg ="User Email can't be null or empty";
+			errorMsg ="Enter emailid first";
 		}
 		if(password == null || password.equals("")){
-			errorMsg = "Password can't be null or empty";
+			errorMsg = "password hasn't entered yet";
 		}
 		
 		if(errorMsg != null){
@@ -68,7 +68,7 @@ public class LoginServlet extends HttpServlet {
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
 				PrintWriter out= response.getWriter();
 				logger.error("User not found with email="+email);
-				out.println("<font color=red>No user found with given email id, please register first.</font>");
+				out.println("<font color=blue>No user found with given email id, please register first.</font>");
 				rd.include(request, response);
 			}
 		} catch (SQLException e) {
