@@ -1,0 +1,8 @@
+com\journaldev\util\DBConnectionManager.class
+com\journaldev\servlet\filters\AuthenticationFilter.class
+com\journaldev\servlet\LoginServlet.class
+com\journaldev\servlet\errorhandler\AppErrorHandler.class
+com\journaldev\servlet\RegisterServlet.class
+com\journaldev\util\User.class
+com\journaldev\servlet\listeners\AppContextListener.class
+com\journaldev\servlet\LogoutServlet.class
