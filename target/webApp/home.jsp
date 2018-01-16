@@ -10,8 +10,8 @@
 <body>
 <%User user = (User) session.getAttribute("User"); %>
 <h3>Hi <%=user.getName() %></h3>
-<strong>Your Email</strong>: <%=user.getEmail() %><br>
-<strong>Your Country</strong>: <%=user.getCountry() %><br>
+<style="color:rgb(0, 162, 255)"><strong>Your Email is</strong>: <%=user.getEmail() %><br>
+<marquee><strong>Your Country is</strong>: <%=user.getCountry() %><br></marquee>
 <br>
 <form action="Logout" method="post">
 <input type="submit" value="Logout" >

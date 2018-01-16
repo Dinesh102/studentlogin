@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 			errorMsg ="Enter emailid first";
 		}
 		if(password == null || password.equals("")){
-			errorMsg = "password hasn't entered yet";
+			errorMsg = "Oops....!password hasn't entered yet";
 		}
 		
 		if(errorMsg != null){
@@ -43,6 +43,11 @@ public class LoginServlet extends HttpServlet {
 			out.println("<font color=red>"+errorMsg+"</font>");
 			rd.include(request, response);
 		}else{
+
+
+
+
+			
 		
 		Connection con = (Connection) getServletContext().getAttribute("DBConnection");
 		PreparedStatement ps = null;
@@ -52,6 +57,7 @@ public class LoginServlet extends HttpServlet {
 			ps.setString(1, email);
 			ps.setString(2, password);
 			rs = ps.executeQuery();
+
 			
 			if(rs != null && rs.next()){
 				
